@@ -6,10 +6,13 @@ module.exports = function(grunt){
       src: ['public/js/**/*.js']
     },
     sass: {
-      dist: {
-        files: {
-          'public/css/style.css': 'public/scss/style.scss'
-        }
+      expanded: {
+        options: { outputStyle: 'expanded' },
+        files: { 'public/css/style.css': 'public/scss/style.scss' }
+      },
+      compressed: {
+        options: { outputStyle: 'compressed' },
+        files: { 'public/css/style.min.css': 'public/scss/style.scss' }
       }
     },
     watch: {

@@ -1,10 +1,11 @@
-var express    = require('express'),
-    app        = express(),
-    bodyParser = require('body-parser'),
-    mongoose   = require('mongoose'),
-    config     = require('./config/config.js');
+var express     = require('express'),
+    app         = express(),
+    bodyParser  = require('body-parser'),
+    mongoose    = require('mongoose'),
+    config      = require('./config/config.js'),
+    databaseUrl = config.databaseUrl;
 
-// mongoose.connect(config.databaseURL);
+mongoose.connect(databaseUrl);
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));

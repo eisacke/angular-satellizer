@@ -1,5 +1,5 @@
 angular
-  .module('satellizer')
+  .module('satellizerApp')
   .controller('UsersController', UsersController);
 
 UsersController.$inject = [];

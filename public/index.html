@@ -1,19 +1,24 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="satellizer">
+<html lang="en" ng-app="satellizerApp">
 <head>
   <meta charset="UTF-8">
   <title>Satellizer App</title>
   <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body ng-controller="UsersController as user">
+<main ng-controller="AuthController as auth">
 <h1>Hello World</h1>
 {{ 2+2 }}
 {{ user.sanity }}
-  
+<button ng-click="auth.authenticate('facebook')">Sign in with Facebook</button>
+</main>
+  <!-- External -->
   <script src="/bower_components/angular/angular.js"></script>
+  <script src="/bower_components/satellizer/satellizer.js"></script>
   <!-- Internal -->
   <script type="text/javascript" src="./js/app.js"></script>
   <!-- Controllers -->
+  <script type="text/javascript" src="./js/controllers/auth.js"></script>
   <script type="text/javascript" src="./js/controllers/users.js"></script>
 </body>
 </html>
